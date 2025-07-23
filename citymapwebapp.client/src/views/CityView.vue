@@ -128,6 +128,9 @@ const initializeMap = () => {
     zoom: 10
   })
 
+  // Add navigation controls (zoom, rotation)
+  map.addControl(new mapboxgl.NavigationControl(), 'top-right')
+
   map.on('load', () => {
     addCityMarkerAndCircle(coordinates)
     addCompanyMarkers()
@@ -258,34 +261,15 @@ setTimeout(initMap, 100)
   background-color: #f5f5f5;
 }
 
-.header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
-
-.header h1 {
-  margin: 0 0 0.5rem 0;
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.header p {
-  margin: 0;
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
 .map-wrapper {
   position: relative;
-  height: calc(100vh - 140px);
+  height: 100vh; /* Increased height for better map visibility */
   padding: 1rem;
 }
 
 .map-container {
   width: 100%;
-  height: 100%;
+  height: 90vh; /* Increased height for the map itself */
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   overflow: hidden;
