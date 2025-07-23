@@ -4,8 +4,7 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "" },
-        { "key": "Content-Security-Policy", "value": "frame-ancestors https://hasanovtural12.retool.com" }
+        { "key": "X-Frame-Options", "value": "" }
       ]
     }
   ]
