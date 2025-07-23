@@ -20,11 +20,11 @@ export default defineNuxtConfig({
 
   security:{
     corsHandler: {
-      origin: "https://hasanovtural12.retool.com"
+      origin: "*"
     },
     headers: {
       contentSecurityPolicy: {
-        'frame-ancestors': "https://hasanovtural12.retool.com"
+        'frame-ancestors': "https://hasanovtural12.retool.com",
       },
     },
   }
